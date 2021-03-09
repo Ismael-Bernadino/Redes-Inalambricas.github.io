@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    background: url(../img/fondo.jpg) fixed no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* --------------------menu----------------- */
+.titulo{
+    background: rgb(19, 141, 189);
+    color: rgb(240, 240, 240);
+    font-size: 52px;
+    padding: 10px;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: space-between;
+}
+.mas{
+    font-size: 25px;
+}
+.titulo2{
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    padding: 4px;
+    margin-right: 50px;
+    color: rgb(19, 141, 189);
+    display: inline-block;
+}
+.nav{
+    float: left;
+    width: 100%;
+    background: rgb(30, 30, 30);
+    color: rgb(240, 240, 240);
+    padding: 0 20px;
+    transition: .3 ease all;
+    backface-visibility: hidden;
+    transform: translate(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+}
+.nav .wrap{
+    position: relative;
+    left: -275px;
+    transition: .4s ease all;
+}
+nav{
+    display: inline-block;
+}
+nav li{
+    display: inline-block;
+}
+nav a{
+    display: block;
+    padding: 15px;
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+    transition: .5s ease all;
+}
+nav > ul > li > a span{
+    font-size: 15px;
+    position: absolute;
+    bottom: -8px;
+    display: none;
+}
+nav > ul > li:hover span{
+    display: block;
+}
+.menu-btn:hover{
+    background: rgb(19, 141, 189);
+}
+body.nav-fix .nav{
+    position: fixed;
+    top: 0;
+}
+body.nav-fix .nav .wrap{
+    left: 0;
+}
+nav ul li .submenu{
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    position: absolute;
+    display: none;
+    width: 680px;
+}
+nav ul li:hover .submenu{
+    display: flex;
+    color:  black;
+}
+.submenu-items{
+    color: black;
+}
+.submenu-items:hover{
+    color: rgb(19, 141, 189);
+    font-size: 20px;
+}
+/* -----------------contenido---------------------- */
+.main-container{
+    background: rgba(30, 30, 30, .75);
+    color: rgb(240, 240, 240);
+    margin: 0px auto;
+    margin-top: 55px;
+    width: 75%;
+    text-align: center;
+    font-family: 'Shippori Mincho B1', serif;
+    font-size: 25px;
+}
+.unidades{
+    padding: 20px;
+}
+h2{
+    font-size: 35px;
+}
+.pdf{
+    width: 100%;
+    height: 65vh;
+}
+
+/* ---------------------------------RESPONSIVE------------------------------------ */
+@media only screen and (max-width: 950px){
+    .titulo{
+        display: none;
+        /* font-size: 30px; */
+    }
+    .nav .wrap{
+        position: relative;
+        left: 0;
+    }
+    .mas{
+        font-size: 14px;
+    }
+    .titulo2{
+        font-size: 25px;
+    }
+    .main-container{
+        width: 100%;
+    }
+    .unidades{
+        padding: 10px;
+        font-size: 15px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .pdf{
+        width: 90%;
+    }
+}
