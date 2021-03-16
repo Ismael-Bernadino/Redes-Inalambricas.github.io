@@ -7,3 +7,7 @@ $(window).scroll(function () {
         $('body').removeClass('nav-fix');
     }
 });
+
+$('.btn-menu').on('click', function () {
+    $('.nav').toggleClass('nav-toggle');
+})
