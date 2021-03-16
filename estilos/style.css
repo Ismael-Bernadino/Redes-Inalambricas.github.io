@@ -94,7 +94,7 @@ nav ul li:hover .submenu{
 }
 .submenu-items:hover{
     color: rgb(19, 141, 189);
-    font-size: 25px;
+    font-size: 20px;
 }
 /* -----------------contenido---------------------- */
 .main-container{
@@ -117,34 +117,107 @@ h2{
     width: 100%;
     height: 65vh;
 }
+.espaciado{
+    height: 10px;
+}
+
+.btn-menu{
+    width: 60px;
+    height: 60px;
+    padding: 22px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(19, 141, 189);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 500ms cubic-bezier(1, 0, 0, 1);
+    transform: translateX(100px);
+}
+.btn-menu:hover{
+    transform: scale(1.2);
+    background: #42acfa;
+}
 
 /* ---------------------------------RESPONSIVE------------------------------------ */
-@media only screen and (max-width: 950px){
+
+@media screen and (max-width: 900px){
+    .btn-menu{
+        transform: translateX(0px);
+    }
     .titulo{
         display: none;
-        /* font-size: 30px; */
+    }
+    .nav{
+        width: 70%;
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        padding: 0px;
+        transform: translateX(-100%);
     }
     .nav .wrap{
-        position: relative;
         left: 0;
     }
-    .mas{
-        font-size: 14px;
+    nav{
+        width: 100%;
+        position: absolute;
+        top: 60px;
+    }
+    nav li{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
     }
     .titulo2{
-        font-size: 25px;
-    }
-    .main-container{
-        width: 100%;
-    }
-    .unidades{
-        padding: 10px;
-        font-size: 15px;
-    }
-    h2{
+        position: absolute;
+        top: 10px;
+        left: 10px;
         font-size: 20px;
     }
-    .pdf{
-        width: 90%;
+    nav a{
+        width: 100%;
+        display: block;
+        padding: 20px;
+        margin: 0;
     }
+    nav ul li .submenu{
+    width: 440px;
+    }
+    .nav-toggle{
+        transition: all 300ms cubic-bezier(1,0,0,1);
+        transform: translateX(0%);
+    }
+    .main-container{
+    width: 100%;
+    font-size: 15px;
+    }
+    .unidades h2{
+        font-size: 18px;
+    }
+    .pdf{
+    width: 90%;
+    height: 50vh;
+    }
+    nav ul li .submenu{
+    background-color: transparent;
+    padding: 0px;
+    position: absolute;
+    display: none;
+    width: 0px;
+}
+nav ul li:hover .submenu{
+    display: none;
+    color:  black;
+}
+nav > ul > li:hover span{
+    display: none;
+}
+.submenu-items:hover{
+    color: transparent;
+    font-size: 0px;
+}
 }
